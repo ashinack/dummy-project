@@ -1,0 +1,31 @@
+<div class="Login-main-content">
+  <div class="login-box">
+    <div class="image-sec">
+      <img src="/assets/Images/camera.png" style="width: 30%" />
+    </div>
+    <div class="input-sec">
+      <mat-form-field appearance="outline">
+        <span matPrefix class="material-symbols-outlined icon"> person </span>
+        <mat-label>User Name</mat-label>
+
+        <input matInput />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <span matPrefix class="material-symbols-outlined icon"> lock </span>
+        <mat-label>Password</mat-label>
+        <input matInput type="password" />
+      </mat-form-field>
+      <div class="text">
+        <mat-checkbox class="example-margin"
+          ><span style="color: white">Remeber Me</span></mat-checkbox
+        >
+        <span>Forgot Password ?</span>
+      </div>
+    </div>
+    <div class="button-sec">
+      <button mat-raised-button class="login-btn" (click)="loginClicked()">
+        LOGIN
+      </button>
+    </div>
+  </div>
+</div>

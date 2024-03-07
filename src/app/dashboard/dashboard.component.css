@@ -1,0 +1,53 @@
+.sidenav {
+  background: linear-gradient(
+    162deg,
+    rgba(156, 133, 255, 1) 37%,
+    rgba(113, 153, 253, 1) 59%,
+    rgba(163, 129, 255, 1) 75%
+  ) !important;
+  width: 250px;
+}
+.navbar {
+  background-color: rgb(209, 215, 218);
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.right-side-sec-icons {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.noti {
+  font-size: 32px;
+}
+.user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.user-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+::ng-deep .mat-mdc-menu-item-text {
+  display: flex;
+  gap: 9px;
+}
+.main-content-sec {
+  /* height: 100%;
+  background-color: rgb(197, 200, 200); */
+  /* height: calc(105vh - 105px);
+  width: 100%; */
+  /* height: calc(100vh - 65px); */
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 15px;
+  background-color: rgb(230, 230, 230);
+}
+::ng-deep .mat-drawer-content {
+  height: 0px;
+}

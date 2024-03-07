@@ -1,0 +1,42 @@
+.mat-table {
+  border-radius: 10px;
+}
+
+.alternate-row {
+  background-color: #9eadf91a;
+}
+::ng-deep .mat-mdc-cell {
+  border-bottom-style: none !important;
+}
+.mat-table-container {
+  max-height: 400px;
+  width: 100%;
+  overflow: auto;
+}
+
+.example-container {
+  height: 375px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
+.mat-paginator {
+  display: flex;
+  border-radius: 21%;
+}
+.whole-table {
+  animation: loader 4s;
+}
+@keyframes loader {
+  0% {
+    width: 50%;
+    rotate: 0deg;
+  }
+  100% {
+    width: 100%;
+    border-radius: 50%;
+    rotate: 360deg;
+  }
+}
