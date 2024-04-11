@@ -1,6 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { PopupComponent } from '../popup/popup.component';
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -75,7 +77,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class TableContentComponent {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
-
+  constructor(public dialog: MatDialog) {}
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
 
@@ -85,5 +87,12 @@ export class TableContentComponent {
 
   isOdd(num: number): boolean {
     return num % 2 == 0;
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(PopupComponent);
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(`Dialog result: ${result.id}`); // Pizza!
+    });
   }
 }

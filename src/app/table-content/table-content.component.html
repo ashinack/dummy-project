@@ -1,106 +1,132 @@
-<div
-  class="mat-elevation-z8 whole-table"
-  style="border-radius: 10px; background-color: white"
->
+<div style="width: 100%; height: 100%">
+  <div class="w3-container w3-center w3-animate-top">
+    <h1>Animation is Fun!</h1>
+    <p>The w3-animate-top class slides in an element from the top.</p>
+  </div>
   <div
-    class="mat-table-container"
+    class="mat-elevation-z8 whole-table"
     style="border-radius: 10px; background-color: white"
   >
-    <table mat-table [dataSource]="dataSource" class="mat-table">
-      <!-- Position Column -->
-      <ng-container matColumnDef="position">
-        <th
-          mat-header-cell
-          *matHeaderCellDef
-          style="
-            background: linear-gradient(
-              162deg,
-              rgba(156, 133, 255, 1) 37%,
-              rgba(113, 153, 253, 1) 59%,
-              rgba(163, 129, 255, 1) 75%
-            ) !important;
-            color: white;
-          "
-        >
-          No.
-        </th>
-        <td mat-cell *matCellDef="let element">{{ element.position }}</td>
-      </ng-container>
+    <div
+      class="mat-table-container"
+      style="border-radius: 10px; background-color: white"
+    >
+      <table mat-table [dataSource]="dataSource" class="mat-table">
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <th
+            mat-header-cell
+            *matHeaderCellDef
+            style="
+              background: linear-gradient(
+                162deg,
+                rgba(156, 133, 255, 1) 37%,
+                rgba(113, 153, 253, 1) 59%,
+                rgba(163, 129, 255, 1) 75%
+              ) !important;
+              color: white;
+            "
+          >
+            No.
+          </th>
+          <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+        </ng-container>
 
-      <!-- Name Column -->
-      <ng-container matColumnDef="name">
-        <th
-          mat-header-cell
-          *matHeaderCellDef
-          style="
-            background: linear-gradient(
-              162deg,
-              rgba(156, 133, 255, 1) 37%,
-              rgba(113, 153, 253, 1) 59%,
-              rgba(163, 129, 255, 1) 75%
-            ) !important;
-            color: white;
-          "
-        >
-          Name
-        </th>
-        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
-      </ng-container>
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th
+            mat-header-cell
+            *matHeaderCellDef
+            style="
+              background: linear-gradient(
+                162deg,
+                rgba(156, 133, 255, 1) 37%,
+                rgba(113, 153, 253, 1) 59%,
+                rgba(163, 129, 255, 1) 75%
+              ) !important;
+              color: white;
+            "
+          >
+            Name
+          </th>
+          <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+        </ng-container>
 
-      <!-- Weight Column -->
-      <ng-container matColumnDef="weight">
-        <th
-          mat-header-cell
-          *matHeaderCellDef
-          style="
-            background: linear-gradient(
-              162deg,
-              rgba(156, 133, 255, 1) 37%,
-              rgba(113, 153, 253, 1) 59%,
-              rgba(163, 129, 255, 1) 75%
-            ) !important;
-            color: white;
-          "
-        >
-          Weight
-        </th>
-        <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
-      </ng-container>
+        <!-- Weight Column -->
+        <ng-container matColumnDef="weight">
+          <th
+            mat-header-cell
+            *matHeaderCellDef
+            style="
+              background: linear-gradient(
+                162deg,
+                rgba(156, 133, 255, 1) 37%,
+                rgba(113, 153, 253, 1) 59%,
+                rgba(163, 129, 255, 1) 75%
+              ) !important;
+              color: white;
+            "
+          >
+            Weight
+          </th>
+          <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
+        </ng-container>
 
-      <!-- Symbol Column -->
-      <ng-container matColumnDef="symbol">
-        <th
-          mat-header-cell
-          *matHeaderCellDef
-          style="
-            background: linear-gradient(
-              162deg,
-              rgba(156, 133, 255, 1) 37%,
-              rgba(113, 153, 253, 1) 59%,
-              rgba(163, 129, 255, 1) 75%
-            ) !important;
-            color: white;
-          "
-        >
-          Symbol
-        </th>
-        <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
-      </ng-container>
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="symbol">
+          <th
+            mat-header-cell
+            *matHeaderCellDef
+            style="
+              background: linear-gradient(
+                162deg,
+                rgba(156, 133, 255, 1) 37%,
+                rgba(113, 153, 253, 1) 59%,
+                rgba(163, 129, 255, 1) 75%
+              ) !important;
+              color: white;
+            "
+          >
+            Symbol
+          </th>
+          <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
+        </ng-container>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-      <tr
-        mat-row
-        *matRowDef="let row; columns: displayedColumns"
-        [ngClass]="{ 'alternate-row': isOdd(row.position) }"
-      ></tr>
-    </table>
+        <tr
+          mat-header-row
+          *matHeaderRowDef="displayedColumns; sticky: true"
+        ></tr>
+        <tr
+          mat-row
+          *matRowDef="let row; columns: displayedColumns"
+          [ngClass]="{ 'alternate-row': isOdd(row.position) }"
+        ></tr>
+      </table>
+    </div>
+
+    <mat-paginator
+      class="mat-paginator"
+      [pageSizeOptions]="[5, 10, 20]"
+      showFirstLastButtons
+      aria-label="Select page of periodic elements"
+    >
+    </mat-paginator>
   </div>
-
-  <mat-paginator
-    class="mat-paginator"
-    [pageSizeOptions]="[5, 10, 20]"
-    showFirstLastButtons
-    aria-label="Select page of periodic elements"
-  >
-  </mat-paginator>
+  <div style="position: absolute; right: 0px; bottom: 0px">
+    <button
+      mat-fab
+      color="primary"
+      aria-label="Example icon button with a home icon"
+      (click)="openDialog()"
+    >
+      <span class="material-symbols-outlined"> add </span>
+    </button>
+    <button
+      mat-fab
+      color="primary"
+      aria-label="Example icon button with a home icon"
+    >
+      <span class="material-symbols-outlined"> download </span>
+    </button>
+  </div>
 </div>

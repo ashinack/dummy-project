@@ -23,6 +23,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { NewComponentComponent } from './new-component/new-component.component';
 import { AnimatedPageComponent } from './animated-page/animated-page.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { PopupComponent } from './popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { AnimatedPageComponent } from './animated-page/animated-page.component';
     TableContentComponent,
     NewComponentComponent,
     AnimatedPageComponent,
+    PopupComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +54,7 @@ import { AnimatedPageComponent } from './animated-page/animated-page.component';
     NgApexchartsModule,
     MatTableModule,
     MatPaginatorModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

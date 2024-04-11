@@ -42,7 +42,7 @@
   background-color: rgb(197, 200, 200); */
   /* height: calc(105vh - 105px);
   width: 100%; */
-  /* height: calc(100vh - 65px); */
+  height: calc(96vh - 65px);
   overflow-y: auto;
   overflow-x: hidden;
   padding: 15px;

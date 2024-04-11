@@ -27,16 +27,42 @@ table {
   border-radius: 21%;
 }
 .whole-table {
-  animation: loader 4s;
+  position: relative;
+  zoom: 1;
+  transform: scale(1);
+  transition: zoom 1.5s ease;
+  /* height: 100%; */
+  animation: fadeIn 2.2s;
+}
+.w3-animate-top {
+  position: relative;
+  animation: loader 1s;
 }
 @keyframes loader {
   0% {
-    width: 50%;
-    rotate: 0deg;
+    top: -300px;
+  }
+
+  100% {
+    top: 0px;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(0, 5vh);
+    transition: all 1s;
   }
   100% {
-    width: 100%;
-    border-radius: 50%;
-    rotate: 360deg;
+    opacity: 1;
+    transform: translate(0, 0);
   }
+}
+
+table tbody td {
+  zoom: 1;
+  transform: scale(1);
+  transition: zoom 1.5s ease;
+  height: 100%;
+  position: relative;
 }
